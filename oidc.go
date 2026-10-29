@@ -35,6 +35,7 @@ func (s *Server) registerIdP() {
 	h("GET /t/{tenant}/saml/{app}/init", s.samlSSO)
 	h("GET /t/{tenant}/saml/{app}/slo", s.samlSLO)
 	h("POST /t/{tenant}/saml/{app}/slo", s.samlSLO)
+	s.registerSCIM()
 }
 
 func (s *Server) issuer(tid string) string { return s.base + "/t/" + tid }

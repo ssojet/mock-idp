@@ -433,6 +433,14 @@ func (s *Server) endpoints(t *Tenant) map[string]any {
 	return map[string]any{
 		"oidc": map[string]string{"issuer": iss, "discovery": iss + "/.well-known/openid-configuration", "authorize": iss + "/authorize",
 			"token": iss + "/token", "userinfo": iss + "/userinfo", "jwks": iss + "/jwks", "logout": iss + "/logout"},
+		"scim": map[string]string{
+			"baseUrl":               iss + "/scim/v2",
+			"serviceProviderConfig": iss + "/scim/v2/ServiceProviderConfig",
+			"resourceTypes":         iss + "/scim/v2/ResourceTypes",
+			"schemas":               iss + "/scim/v2/Schemas",
+			"users":                 iss + "/scim/v2/Users",
+			"groups":                iss + "/scim/v2/Groups",
+		},
 		"apps":              apps,
 		"certificatePem":    t.CertPEM,
 		"certificateUrl":    iss + "/cert.pem",
