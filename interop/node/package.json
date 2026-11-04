@@ -6,8 +6,8 @@
     "test": "node --test"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.32.1",
-    "@node-saml/node-saml": "5.1.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@node-saml/node-saml": "5.2.0",
     "openid-client": "6.8.8"
   }
 }
